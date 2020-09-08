@@ -1,0 +1,90 @@
+@import "_variables";
+@import "_mixins";
+// common page styles
+* {
+  scroll-behavior: smooth;
+}
+.wrapper {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 160px 0;
+}
+h1 {
+  @include font-style(50px, 54px);
+}
+h2 {
+  @include font-style(24px, 29px);
+}
+.typo-text {
+  @include font-style(16px, 24px);
+  &_bold {
+    font-weight: bold;
+  }
+}
+.title {
+  margin: 0 auto;
+  max-width: 506px;
+  text-align: center;
+  & p {
+    max-width: 448px;
+    margin: 11px auto 0 auto;
+  }
+}
+.active {
+  color: $secondary-color;
+}
+a:hover {
+  color: $primary-color;
+}
+button {
+  cursor: pointer;
+  &:hover {
+    background-color: #cf3a2b;
+  }
+  &:disabled,
+  :hover:disabled {
+    background-color: #c2bfbf;
+    color: #989898;
+  }
+}
+a {
+  cursor: pointer;
+  color: #000;
+}
+.btn {
+  cursor: pointer;
+  width: 210px;
+  height: 38px;
+  border-radius: 4px;
+  border: none;
+  &_red {
+    background-color: $primary-color;
+    color: #fff;
+  }
+  &_flat {
+    background-color: transparent;
+    color: $primary-color;
+  }
+}
+
+// responsive for tablet
+@media only screen and(max-width:768px) {
+  .wrapper {
+    max-width: 768px;
+    padding: 120px 0;
+  }
+  h1 {
+    @include font-style(40px, 44px);
+  }
+}
+
+// responsive for mobile
+@media only screen and(max-width:360px) {
+  .wrapper {
+    max-width: 360px;
+    padding: 75px 0;
+  }
+  h1 {
+    @include font-style(30px, 34px);
+  }
+}

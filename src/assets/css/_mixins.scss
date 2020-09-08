@@ -1,0 +1,7 @@
+// миксин для определения стиля шрифтов
+@mixin font-style($f-size, $l-height) {
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  font-size: $f-size;
+  line-height: $l-height;
+}
